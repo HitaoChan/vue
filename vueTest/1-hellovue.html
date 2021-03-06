@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <!-- view层 -->
+    <div id="app">
+        <!-- 声明变量message -->
+        {{message}}
+  
+    </div>
+
+    <div id="box">
+        {{ 10+20 }}
+        <p>
+            {{myname}}
+        </p>
+    </div>
+    <div>
+        {{ 10+20 }}
+    </div>
+
+    <script type="text/javascript">
+        // new Vue传回一个vue对象
+        // model层：数据
+        var app = new Vue({
+            el:'#app',//element缩写
+            data:{
+                message:'hello world'
+            }
+        })
+        var vm = new Vue({
+            el:"#box",
+            data:{
+                myname:"cht"
+            }
+        })
+    </script>
+</body>
+</html>
